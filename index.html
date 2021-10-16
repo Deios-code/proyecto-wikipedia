@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- definimos el idioma del sitio web -->
+<!-- es = español -->
+<html lang="es">
+<head>
+    <!-- por defecto del programa -->
+    <!-- pueden haber caracteres especiales (como ñ o tildes) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo de la pagina -->
+    <title>Seeker</title>
+    <!-- enlazamos la libreria de la galeria -->
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- enlazamos los estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <!-- estructura de la barra lateral -->
+        <div class="barra-menu">
+            <img src="imagenes/logo.png" alt="">
+            <p>Información a tu alcance</p>
+            <h4>Navegación</h4>
+            <nav class="menu">
+                
+            <!-- funciona de la siguiente manera, al darle click, toma el numero que está entre comillas -->
+                <a  data-paso="0">Inicio</a>
+                <a  data-paso="1">Medio Ambiente</a>
+                <a  data-paso="2">Mascotas</a>
+                <a  data-paso="3">Viajes</a>
+                <a  data-paso="4">Historia</a>
+                <a  data-paso="5">Salud</a>
+                <a  data-paso="6" class="curiosidad">Curiosidades</a>
+            </nav>
+        </div>
+        <!-- estructura del contenido -->
+        <div class="contenido">
+            <!-- según el numero al que le dieron click, se muestra el contenido -->
+            <div id="paso-0" class="nomostrar">
+                <!-- titulo de la sección -->
+                <h2>Inicio</h2>
+                <!-- contenido debajo del titulo -->
+                <div class="cont">
+                    <img src="imagenes/inicio.svg" alt="">
+                </div>
+            </div>
+            <div id="paso-1" class="nomostrar">
+                <h2>Medio Ambiente</h2>
+                <div class="cont">
+                    <!-- imagen que se muestra debajo del titulo -->
+                    <a href="imagenes/medioambiente.jpeg" data-lightbox="galeria">
+                        <!-- imagen que se muestra la dar click en la imagen debajo del titulo -->
+                        <img src="imagenes/medioambiente.jpeg" alt="">
+                    </a>
+                    <a href="imagenes/ma.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/mA.jpeg" alt="">
+                    </a>
+                    <a href="imagenes/Ma2.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/mA2.jpeg" alt="">
+                    </a>
+                    <a href="imagenes/ma3.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/ma3.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="paso-2" class="nomostrar">
+                <h2>Mascotas</h2>
+                <div class="cont">
+                    <a href="imagenes/mascotas.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/mascotas.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="paso-3" class="nomostrar">
+                <h2>Viajes</h2>
+                <div class="cont">
+                    <a href="imagenes/viajes.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/viajes.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="paso-4" class="nomostrar">
+                <h2>Historia</h2>
+                <div class="cont">
+                    <a href="imagenes/historia.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/historia.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="paso-5" class="nomostrar">
+                <h2>Salud</h2>
+                <div class="cont">
+                    <a href="imagenes/salud.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/salud.jpeg" alt="">
+                    </a>
+                    <a href="imagenes/salud2.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/salud2.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="paso-6" class="nomostrar">
+                <h2>Curiosidades</h2>
+                <div class="cont">
+                    <a href="imagenes/CU.jpeg" data-lightbox="galeria">
+                        <img src="imagenes/CU.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        Diseñado y Desarrollado por  <img src="imagenes/logo.png" alt="">
+    </footer>
+    <!-- JQuery es una libreria online muy popular que permite varias animaciones, como la de la galeria -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- libreria de la galeria -->
+    <script src="lightbox.js"></script>
+    <!-- enlazamos el codigo con el que mostramos el contenido -->
+    <script src="main.js"></script>
+</body>
+</html>

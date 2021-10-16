@@ -1,0 +1,151 @@
+/*El contenido  de la pagina se ordena como si fuera una caja */
+html {
+    box-sizing: border-box;
+}
+/* para evitar errores del navegador */
+*,*:before,*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {    
+    /* tipo de fuente */
+    font-family: 'Hind Madurai', sans-serif;
+    /* tamaño de fuente */
+    font-size: 18px;
+    /* color de fondo */
+}
+img{
+    /* es para que las imagenes no se desborden */
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/* sección principal */
+header{
+    /* para que ocupe toda la pagina */
+    min-height: 100vh;
+    /* imagen de fondo */
+    background: url(../imagenes/banner.jpg);
+    /*Organiza como rejilla*/
+    display: grid;
+    /* crea 2 espacios, uno pequeño (el menu) y otro más grande (el espacio blanco donde se muestran las imagenes) */
+    grid-template-columns: 2fr 10fr;
+}
+header .barra-menu{
+    /* color de fondo de la barra lateral */
+    background-color: #F7EADA;
+    /* alineo el texto en todo el centro */
+    display: flex;
+    /* coloco todo en una columna */
+    flex-direction: column;
+     /* alineo al centro */
+    justify-content: center;
+     /* alineo al centro */
+    align-items: center;
+}
+header .barra-menu p{
+    /* tamaño de la letra debajo del logo */
+    font-size: 12px;
+}
+header .barra-menu h4{
+    /* margen inferior del titulo "navegacion" */
+    margin: 1rem 0;
+}
+header nav.menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+header nav.menu a{
+    /* espacio de adentro hacia aduera */
+    padding: 20px;
+    color: #050100;
+}
+header nav.menu a:hover{
+    background-color: rgba(243, 221, 193, 0.5);
+}
+header nav.menu a.curiosidad{
+    background-color: #9A636B;
+    color: white;
+}
+header nav.menu a.actual{
+    background-color: #9A636B;
+    color: white;
+}
+/* --------- */
+/* Contenido */
+/* --------- */
+.contenido{
+    background-color: rgba(255,255,255,0.9);
+    /* ancho */
+    width: 90%;
+    /* alto */
+    height: 90%;
+    /* toma un margen automatico para que se centre */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contenido .nomostrar{
+    /* para que no muestre el contenido */
+    display: none;
+}
+.contenido img{
+    /* tamaño alto máximo */
+    max-height: 700px;
+}
+/* esto se activa cuando se muestra el contenido  */
+.mostrar-seccion{
+    display: flex!important;
+    flex-direction: column;
+    max-height: 100%;
+}
+.cont{
+    display: flex;
+    padding: 2rem;
+}
+/* --------- */
+/* pie de pagina */
+/* --------- */
+footer{
+    background-color: #F7EADA;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+footer img{
+    width: 80px;
+    margin-left: 10px;
+}
+/* estilos para que se vea bien en celular */
+@media (max-width: 810px) {
+    
+    /* sección principal */
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header nav.menu{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        justify-content: center;
+    }
+    .contenido{
+        padding: 50px;
+    }
+}
+@media (max-width: 768px) {
+    header nav.menu{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
